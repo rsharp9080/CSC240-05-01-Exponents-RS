@@ -36,14 +36,16 @@ namespace Exponents
              * do this with a method call that allows you to pass the number
              * and then receive the answer */
             uxOutputLabel.Text = "Square is: " + Square(num).ToString();
-            uxOutputLabel.Visible = true;
+
             /* calculate the cube of the number and add it to the output - 
              * do this by creating a methd as in the squaring example above */
             uxOutputLabel.Text += "\nCube is: " + Cube(num).ToString();
             // OUTPUT
             // set the output to visible
-
+            uxOutputLabel.Visible = true;
             // turn the Go button off
+            uxGoButton.Enabled = false;
+            
         }
 
         public int Square(int num)
@@ -51,8 +53,7 @@ namespace Exponents
             // we will create this code in class
             return num * num;
         }
-
-        public int Cube(int num)
+            public int Cube(int num)
         {
             // we will create this code in class
             return num * num * num;
@@ -63,6 +64,11 @@ namespace Exponents
             // the input and output text should be emptied
             // turn the output to invisible
             // turn the Go button back on
+            uxGoButton.Enabled = true;
+            uxResetButton.Enabled = true;
+            uxOutputLabel.Visible = false;
+            uxInputTextBox.Text = "";
+            uxGoButton.Enabled = true;
         }
 
         private void uxInputTextBox_TextChanged(object sender, EventArgs e)

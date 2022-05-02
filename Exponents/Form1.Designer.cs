@@ -92,6 +92,7 @@
             this.Controls.Add(this.uxInputLabel);
             this.Controls.Add(this.uxInputTextBox);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exponents Demo";
             this.ResumeLayout(false);
             this.PerformLayout();
